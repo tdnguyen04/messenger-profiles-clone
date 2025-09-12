@@ -1,4 +1,29 @@
+import profiles from "./data";
+
 const App = () => {
-  return <h2>Birthday Reminder - Starter</h2>;
+  return (
+    <>
+      <div className="sidebar">
+        <header>
+          <h3>Chats</h3>
+          <div className="icons"></div>
+        </header>
+        <input type="text" className="search-bar" placeholder="Search Messenger" />
+        <div className="button-container">
+          <button className="btn">Clear contacts</button>
+        </div>
+        {profiles.map((profile) => {
+          return (
+            <div className="profile">
+              <img src={profile.image} alt={profile.name} className="avatar" />
+              <h5>{profile.name}</h5>
+            </div>
+          );
+        })}
+      </div>
+      <div className="main-chat">
+      </div>
+    </>
+  );
 };
 export default App;
