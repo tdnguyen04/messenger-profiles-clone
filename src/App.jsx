@@ -2,20 +2,32 @@ import { useState } from "react";
 import initialProfiles from "./data";
 
 const App = () => {
-  const [profiles, setProfiles] = useState(initialProfiles)
+  const [profiles, setProfiles] = useState(initialProfiles);
   const clearProfiles = () => {
-    setProfiles([])
-  }
+    setProfiles([]);
+  };
   return (
     <>
       <div className="sidebar">
         <header>
           <h3>Chats</h3>
-          <div className="icons"></div>
+          <div className="icons">
+            <div className="icon">
+              <div className="inner-circle">
+                <i className="fa-brands fa-facebook-f"></i>
+              </div>
+            </div>
+          </div>
         </header>
-        <input type="text" className="search-bar" placeholder="Search Messenger" />
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search Messenger"
+        />
         <div className="button-container">
-          <button className="btn" onClick={clearProfiles}>Clear contacts</button>
+          <button className="btn" onClick={clearProfiles}>
+            Clear contacts
+          </button>
         </div>
         {profiles.map((profile) => {
           return (
@@ -26,8 +38,7 @@ const App = () => {
           );
         })}
       </div>
-      <div className="main-chat">
-      </div>
+      <div className="main-chat"></div>
     </>
   );
 };

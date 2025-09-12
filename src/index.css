@@ -270,15 +270,19 @@ body {
   background: #2d2d2d;
   border-radius: 0.5rem;
   height: 100vh;
+  min-height: fit-content;
 }
 
 .sidebar {
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
   width: 40rem;
 }
 
 .sidebar h3 {
   font-weight: 700;
+  margin-left: 1rem;
 }
 
 .sidebar h5 {
@@ -287,6 +291,44 @@ body {
 
 .sidebar header {
   margin-bottom: 2rem;
+  display: flex;
+}
+
+.sidebar header .icons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.sidebar i[class^="fa"] { 
+
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: #525354;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #222;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+.icon .inner-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #bebebe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 
 .sidebar .search-bar {
@@ -294,10 +336,11 @@ body {
   border: none;
   font-size: 1rem;
   padding: 0.875rem 1.25rem;
-  width: 100%;
+  width: calc(100% - 1rem);
   background: #3a3b3c;
   color: white;
   border-radius: 3rem;
+  margin-left: 1rem;
 }
 
 .sidebar .search-bar::placeholder {
@@ -317,6 +360,15 @@ body {
   align-items: center;
   gap: 1rem;
   margin-block: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.875rem;
+  transition: var(--transition);
+  user-select: none;
+  cursor: pointer;
+}
+
+.profile:hover {
+  background-color: #676767;
 }
 
 .sidebar button {
