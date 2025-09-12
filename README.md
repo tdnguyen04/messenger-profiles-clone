@@ -1,6 +1,6 @@
 ## Model
 Goal: Cloning the layout of Messenger
-![alt text](./src/assets/model_layout.png)
+![alt text](/public/assets/model_layout.png)
 
 ## Steps
 
@@ -9,7 +9,7 @@ Update README with the final goal and prepare the profiles' images in src/assets
 
 ### Set Up Basic Layout
 This is the current layout 
-![alt text](./src/assets/current_layout.png)
+![alt text](/public/assets/current_layout.png)
 
 ### Setup State Variable
 
