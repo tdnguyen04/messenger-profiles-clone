@@ -277,8 +277,12 @@ body {
   width: 40rem;
 }
 
-h3 {
+.sidebar h3 {
   font-weight: 700;
+}
+
+.sidebar h5 {
+  letter-spacing: normal;
 }
 
 .sidebar header {

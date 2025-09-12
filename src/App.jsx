@@ -1,6 +1,11 @@
-import profiles from "./data";
+import { useState } from "react";
+import initialProfiles from "./data";
 
 const App = () => {
+  const [profiles, setProfiles] = useState(initialProfiles)
+  const clearProfiles = () => {
+    setProfiles([])
+  }
   return (
     <>
       <div className="sidebar">
@@ -10,7 +15,7 @@ const App = () => {
         </header>
         <input type="text" className="search-bar" placeholder="Search Messenger" />
         <div className="button-container">
-          <button className="btn">Clear contacts</button>
+          <button className="btn" onClick={clearProfiles}>Clear contacts</button>
         </div>
         {profiles.map((profile) => {
           return (
