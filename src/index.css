@@ -359,10 +359,9 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-block: 2rem;
+  padding-block: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.875rem;
-  transition: var(--transition);
   user-select: none;
   cursor: pointer;
 }
@@ -374,7 +373,7 @@ body {
 .sidebar button {
   display: inline;
   background: black;
-  margin-top: 1rem;
+  margin-block: 1rem;
   text-align: right;
   padding-block: 0.5rem;
 }
