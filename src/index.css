@@ -300,10 +300,6 @@ body {
   justify-content: end;
 }
 
-.sidebar i[class^="fa"] { 
-
-}
-
 .icon {
   width: 3rem;
   height: 3rem;
@@ -358,7 +354,7 @@ body {
 .profile {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: end;
   padding-block: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.875rem;
@@ -370,11 +366,45 @@ body {
   background-color: #676767;
 }
 
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-options{
+  opacity: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.profile:hover .profile-options {
+  opacity: 100%;
+}
+
+.ellipsis-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #212121ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.profile:hover .ellipsis-icon:hover {
+  background-color: #525354;
+}
+
 .sidebar button {
   display: inline;
   background: black;
   margin-block: 1rem;
-  text-align: right;
   padding-block: 0.5rem;
 }
 
